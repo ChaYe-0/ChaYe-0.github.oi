@@ -187,7 +187,7 @@
   
           </div>
           <div class="wordcount need-seperator meta-info">
-            1.3k 词 
+            2.5k 词 
           </div>
         </div>
         
@@ -198,8 +198,10 @@
         
           <div class="truncate-text">
             
-              数据结构并查集模板题链接：P3367 【模板】并查集
-12345678910111213141516171819202122232425262728293031323334353637383940414243#include &lt;bits/stdc++.h&gt;using namespace std;const int N = 2 * 1e6 + 10;int n, m, type, x, y, fa[N];int find(int x)&#123;	if (x == fa[x])		return x;	else		return fa[x] = find(fa[x]); // 🦌径🦆缩//		return find(fa[x]);         // 没🦌径🦆缩&#125;void uio(int x, int y)&#123;	int fx = find(x), fy = find(y);	if (fx != fy)		fa[fy] = fx;	return ;&#125;int main()&#123;	cin &gt;&gt; n &gt;&gt; m;	f...
+              动态规划01背包模板题链接：P1048 [NOIP 2005 普及组] 采药
+12345678910111213141516171819#include &lt;bits/stdc++.h&gt;using namespace std;const int N = 1e3 + 10;int m, n, w[N], c[N], dp[N];int main()&#123;	cin &gt;&gt; m &gt;&gt; n;	for (int i = 1; i &lt;= n; i++)		cin &gt;&gt; w[i] &gt;&gt; c[i];	for (int i = 1; i &lt;= n; i++)		for (int j = m; j &gt;= w[i]; j--)				dp[j] = max(dp[j], dp[j - w[i]] + c[i]);	cout &lt;&lt; dp[m];		return 0;&#125;
+完全背包模板题链接：B2174 完全背包
+12345678910111213141516171819#include &lt;bits/...
             
           </div>
         
